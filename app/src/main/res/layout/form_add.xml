@@ -26,20 +26,20 @@
         android:layout_below="@id/title_view"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:text="Waktu Mulai"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
         android:id="@+id/start_form"
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/start"
-        app:cardCornerRadius="8dp"
-        android:text="Masukan waktu mulai"
+        android:drawableStart="@drawable/ic_time"
+        android:hint="Pilih Waktu"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"/>
@@ -60,11 +60,11 @@
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/end"
-
-        android:text="Masukan waktu berhenti"
+        android:drawableStart="@drawable/ic_time"
+        android:hint="Pilih Waktu"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
         android:layout_marginRight="40dp"/>
