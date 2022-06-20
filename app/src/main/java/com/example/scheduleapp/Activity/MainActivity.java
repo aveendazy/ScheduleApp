@@ -1,4 +1,4 @@
-package com.example.scheduleapp;
+package com.example.scheduleapp.Activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -6,6 +6,9 @@ import android.view.View;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
+
+import com.example.scheduleapp.R;
+import com.example.scheduleapp.TuesdayActivity;
 
 public class MainActivity extends AppCompatActivity implements View.OnClickListener {
 
@@ -34,7 +37,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
 
             case R.id.card_tuesday:
-                i = new Intent(this,TuesdayActivity.class);
+                i = new Intent(this, TuesdayActivity.class);
                 startActivity(i);
                 break;
         }
