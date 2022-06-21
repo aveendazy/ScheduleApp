@@ -5,7 +5,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/design_default_color_primary"
-    tools:context=".Activity.MondayActivity">
+    tools:context=".Activity.UpdateActivity">
+
+
 
     <TextView
         android:id="@+id/title_view"
@@ -26,28 +28,30 @@
         android:layout_below="@id/title_view"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
-        android:layout_marginLeft="40dp"
+        android:layout_marginStart="40dp"
         android:text="Waktu Mulai"
-        android:textSize="18dp"/>
+        android:textSize="18sp"/>
 
     <EditText
-        android:id="@+id/start_form"
+        android:id="@+id/add_wktMulai"
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/start"
-        android:text="Masukan waktu mulai"
+        android:drawableStart="@drawable/ic_time"
+        android:hint="Pilih Waktu"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginRight="40dp"
+        android:inputType="time"/>
 
     <TextView
         android:id="@+id/end"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/start_form"
+        android:layout_below="@id/add_wktMulai"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
@@ -55,23 +59,25 @@
         android:textSize="18dp"/>
 
     <EditText
-        android:id="@+id/end_form"
+        android:id="@+id/add_wktSelesai"
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/end"
-        android:text="Masukan waktu berhenti"
+        android:drawableStart="@drawable/ic_time"
+        android:hint="Pilih Waktu"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
-        android:paddingLeft="20dp"
+        android:paddingStart="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginRight="40dp"
+        android:inputType="time"/>
 
     <TextView
         android:id="@+id/jadwal"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/end_form"
+        android:layout_below="@id/add_wktSelesai"
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
@@ -79,29 +85,33 @@
         android:textSize="18dp"/>
 
     <EditText
-        android:id="@+id/jadwal_form"
+        android:id="@+id/add_jadwal"
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/jadwal"
-        android:text="Masukan jadwal"
+        android:hint="Masukan jadwal"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
         android:paddingLeft="20dp"
         android:layout_marginTop="10dp"
         android:layout_marginLeft="40dp"
-        android:layout_marginRight="40dp"/>
+        android:layout_marginRight="40dp"
+        android:maxLines="3"
+        android:inputType="text"/>
 
 
     <Button
+        android:id="@+id/btn_update"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/jadwal_form"
+        android:layout_below="@id/add_jadwal"
         android:layout_alignParentStart="true"
         android:layout_alignParentEnd="true"
-        android:layout_marginStart="122dp"
-        android:layout_marginTop="32dp"
-        android:layout_marginEnd="124dp"
+        android:layout_marginStart="86dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="86dp"
         android:background="@drawable/rounded_button"
-        android:text="SIMPAN"/>
+        android:gravity="center_horizontal"
+        android:text="SIMPAN PERUBAHAN" />
 
 </RelativeLayout>

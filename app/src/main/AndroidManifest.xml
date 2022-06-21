@@ -17,6 +17,10 @@
             android:parentActivityName=".Activity.MondayActivity">
         </activity>
         <activity
+            android:name=".Activity.UpdateActivity"
+            android:parentActivityName=".Activity.MondayActivity">
+        </activity>
+        <activity
             android:name=".Activity.MondayActivity">
         </activity>
         <activity
