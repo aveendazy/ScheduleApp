@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Schedule App</string>
+    <string name="title_home">Jadwal Kuliah</string>
+    <string name="monday">Senin</string>
+    <string name="tuesday">Selasa</string>
+    <string name="wednesday">Rabu</string>
+    <string name="thursday">Kamis</string>
+    <string name="friday">Jumat</string>
+    <string name="saturday">Sabtu</string>
+    <string name="sunday">Minggu</string>
+    <string name="wktMulai">Waktu Mulai</string>
+    <string name="wktSelesai">Waktu Selesai</string>
+    <string name="jadwal">Jadwal</string>
+    <string name="hint1">Pilih Waktu</string>
+    <string name="hint2">Tulis Jadwalmu</string>
+    <string name="save">Simpan</string>
+    <string name="save_changes">Simpan Perubahan</string>
+    <string name="language">Bahasa</string>
+</resources>

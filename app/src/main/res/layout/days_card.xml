@@ -7,12 +7,17 @@
     android:background="@color/design_default_color_primary"
     tools:context=".Activity.MainActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <TextView
         android:id="@+id/title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
         android:layout_centerHorizontal="true"
-        android:text="JADWAL KULIAH"
+        android:text="@string/title_home"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="50dp"
@@ -51,7 +56,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SENIN"
+                    android:text="@string/monday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -82,7 +87,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SELASA"
+                    android:text="@string/tuesday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -113,7 +118,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="RABU"
+                    android:text="@string/wednesday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -144,7 +149,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="KAMIS"
+                    android:text="@string/thursday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -175,7 +180,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="JUMAT"
+                    android:text="@string/friday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -206,7 +211,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="SABTU"
+                    android:text="@string/saturday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 
@@ -237,7 +242,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="MINGGU"
+                    android:text="@string/sunday"
                     android:textStyle="bold"
                     android:textAlignment="center"/>
 

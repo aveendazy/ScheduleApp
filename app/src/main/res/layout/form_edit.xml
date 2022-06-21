@@ -14,7 +14,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
-        android:text="SENIN"
+        android:text="@string/monday"
         android:textStyle="bold"
         android:textSize="30sp"
         android:layout_marginTop="50dp"
@@ -29,7 +29,7 @@
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginStart="40dp"
-        android:text="Waktu Mulai"
+        android:text="@string/wktMulai"
         android:textSize="18sp"/>
 
     <EditText
@@ -38,7 +38,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/start"
         android:drawableStart="@drawable/ic_time"
-        android:hint="Pilih Waktu"
+        android:hint="@string/hint1"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
         android:paddingStart="20dp"
@@ -55,7 +55,7 @@
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
-        android:text="Waktu Berhenti"
+        android:text="@string/wktSelesai"
         android:textSize="18dp"/>
 
     <EditText
@@ -64,7 +64,7 @@
         android:layout_height="50dp"
         android:layout_below="@+id/end"
         android:drawableStart="@drawable/ic_time"
-        android:hint="Pilih Waktu"
+        android:hint="@string/hint1"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
         android:paddingStart="20dp"
@@ -81,7 +81,7 @@
         android:textColor="#fff"
         android:layout_marginTop="20dp"
         android:layout_marginLeft="40dp"
-        android:text="Jadwal"
+        android:text="@string/jadwal"
         android:textSize="18dp"/>
 
     <EditText
@@ -89,7 +89,7 @@
         android:layout_width="500dp"
         android:layout_height="50dp"
         android:layout_below="@+id/jadwal"
-        android:hint="Masukan jadwal"
+        android:hint="@string/hint2"
         android:background="@color/cardview_light_background"
         android:textColor="#B8B8B8"
         android:paddingLeft="20dp"
@@ -112,6 +112,6 @@
         android:layout_marginEnd="86dp"
         android:background="@drawable/rounded_button"
         android:gravity="center_horizontal"
-        android:text="SIMPAN PERUBAHAN" />
+        android:text="@string/save_changes" />
 
 </RelativeLayout>

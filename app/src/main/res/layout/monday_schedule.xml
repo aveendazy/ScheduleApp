@@ -7,20 +7,25 @@
     android:background="@color/design_default_color_primary"
     tools:context=".Activity.MondayActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
+
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/srl_data">
+        android:id="@+id/srl_data"
+        android:layout_below="@+id/toolbar">
 
         <TextView
             android:id="@+id/title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="center_horizontal"
-            android:text="SENIN"
+            android:text="@string/monday"
             android:textStyle="bold"
             android:textSize="30sp"
-            android:paddingTop="50dp"
+            android:paddingTop="30dp"
             android:paddingBottom="20dp"
             android:textColor="#fff"/>
 
@@ -56,6 +61,7 @@
         android:layout_margin="32dp"
         android:clickable="true"
         android:src="@drawable/ic_add"
+        android:backgroundTint="#FC9918"
         />
 
 
