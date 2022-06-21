@@ -7,30 +7,45 @@
     android:background="@color/design_default_color_primary"
     tools:context=".Activity.MondayActivity">
 
-    <TextView
-        android:id="@+id/title_view"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="SENIN"
-        android:textStyle="bold"
-        android:textSize="30sp"
-        android:layout_marginTop="50dp"
-        android:layout_marginBottom="20dp"
-        android:textColor="#fff"/>
-
-    <androidx.recyclerview.widget.RecyclerView
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/rv_data"
-        android:layout_below="@+id/title_view"
-        android:layout_marginTop="15dp"
-        android:layout_marginLeft="30dp"
-        android:layout_marginRight="30dp"
-        app:cardCornerRadius="8dp"
-        tools:listitem="@layout/card_item">
+        android:id="@+id/srl_data">
 
-    </androidx.recyclerview.widget.RecyclerView>
+        <TextView
+            android:id="@+id/title_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center_horizontal"
+            android:text="SENIN"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:paddingTop="50dp"
+            android:paddingBottom="20dp"
+            android:textColor="#fff"/>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/rv_data"
+            android:layout_below="@+id/title_view"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="30dp"
+            android:layout_marginRight="30dp"
+            app:cardCornerRadius="8dp"
+            tools:listitem="@layout/card_item">
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <ProgressBar
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/pb_data"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"/>
+
+
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
         android:layout_width="wrap_content"
@@ -40,6 +55,7 @@
         android:layout_alignParentRight="true"
         android:layout_margin="32dp"
         android:clickable="true"
+        android:src="@drawable/ic_add"
         />
 
 

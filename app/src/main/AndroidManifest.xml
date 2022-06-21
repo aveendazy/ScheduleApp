@@ -12,10 +12,16 @@
         android:usesCleartextTraffic="true"
         android:theme="@style/Theme.ScheduleApp"
         android:supportsRtl="true">
-        <activity android:name=".AddActivity"></activity>
-        <activity android:name=".Activity.MondayActivity"></activity>
-        <activity android:name=".TuesdayActivity"></activity>
-
+        <activity
+            android:name=".Activity.AddActivity"
+            android:parentActivityName=".Activity.MondayActivity">
+        </activity>
+        <activity
+            android:name=".Activity.MondayActivity">
+        </activity>
+        <activity
+            android:name=".TuesdayActivity">
+        </activity>
         <activity
             android:name=".Activity.MainActivity"
             android:exported="true">
