@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/design_default_color_primary"
+    android:background="@color/background"
     tools:context=".Activity.MondayActivity">
 
     <include
@@ -21,13 +21,13 @@
             android:id="@+id/title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:gravity="center_horizontal"
             android:text="@string/monday"
             android:textStyle="bold"
             android:textSize="30sp"
             android:paddingTop="30dp"
+            android:paddingStart="40dp"
             android:paddingBottom="20dp"
-            android:textColor="#fff"/>
+            android:textColor="@color/blue"/>
 
         <androidx.recyclerview.widget.RecyclerView
             android:layout_width="match_parent"
