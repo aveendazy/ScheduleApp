@@ -1,0 +1,28 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/rounded_widget"
+    android:padding="2dp"
+    android:gravity="center"
+    android:textAlignment="center"
+    android:theme="@style/ThemeOverlay.ScheduleApp.AppWidgetContainer">
+
+
+        <TextView
+            android:id="@+id/appwidget_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/title_home"
+            android:textColor="@color/blue"
+            android:textSize="12sp"
+            android:textStyle="bold|italic" />
+
+        <Button
+            android:id="@+id/btn_widget"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:text="See Schedule"
+            android:textSize="12sp" />
+
+</RelativeLayout>

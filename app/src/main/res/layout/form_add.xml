@@ -7,16 +7,19 @@
     android:background="@color/background"
     tools:context=".Activity.MondayActivity">
 
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/toolbar" />
 
     <TextView
         android:id="@+id/title_view"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_below="@id/toolbar"
         android:text="@string/monday"
         android:textStyle="bold"
         android:textSize="30sp"
-        android:layout_marginTop="50dp"
+        android:layout_marginTop="40dp"
         android:layout_marginStart="40dp"
         android:layout_marginBottom="20dp"
         android:textColor="@color/blue"/>
@@ -27,7 +30,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/title_view"
         android:textColor="@color/blue"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:layout_marginStart="40dp"
         android:text="@string/wktMulai"
         android:textSize="18sp"/>
