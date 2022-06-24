@@ -35,4 +35,14 @@ public class DataModel {
     public void setJadwal(String jadwal) {
         this.jadwal = jadwal;
     }
+
+    @Override
+    public String toString() {
+        return "DataModel{" +
+                "id=" + id +
+                ", wktMulai='" + wktMulai + '\'' +
+                ", wktSelesai='" + wktSelesai + '\'' +
+                ", jadwal='" + jadwal + '\'' +
+                '}';
+    }
 }

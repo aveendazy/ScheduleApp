@@ -12,71 +12,73 @@
         layout="@layout/toolbar" />
 
     <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/srl_data"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:id="@+id/srl_data"
         android:layout_below="@+id/toolbar">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
         <TextView
             android:id="@+id/title_view"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/monday"
-            android:textStyle="bold"
-            android:textSize="30sp"
-            android:paddingTop="30dp"
             android:paddingStart="40dp"
+            android:paddingTop="30dp"
             android:paddingBottom="20dp"
-            android:textColor="@color/blue"/>
+            android:text="@string/monday"
+            android:textColor="@color/blue"
+            android:textSize="30sp"
+            android:textStyle="bold" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rv_data"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:id="@+id/rv_data"
             android:layout_below="@+id/title_view"
-            android:layout_marginTop="15dp"
             android:layout_marginLeft="30dp"
+            android:layout_marginTop="15dp"
             android:layout_marginRight="30dp"
             app:cardCornerRadius="8dp"
-            tools:listitem="@layout/card_item">
-        </androidx.recyclerview.widget.RecyclerView>
+            tools:listitem="@layout/card_item"/>
+        </LinearLayout>
 
     </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
 
     <ProgressBar
+        android:id="@+id/pb_data"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/pb_data"
         android:layout_centerInParent="true"
-        android:visibility="invisible"/>
-
+        android:visibility="invisible" />
 
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab_tambah"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:id="@+id/fab_tambah"
-        android:layout_alignParentBottom="true"
         android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_margin="32dp"
-        android:clickable="true"
-        android:src="@drawable/ic_add"
         android:backgroundTint="#FC9918"
-        />
+        android:clickable="true"
+        android:src="@drawable/ic_add" />
 
 
-
-<!--    <Button-->
-<!--        android:layout_width="wrap_content"-->
-<!--        android:layout_height="wrap_content"-->
-<!--        android:id="@+id/add_form"-->
-<!--        android:layout_below="@id/card3"-->
-<!--        android:layout_alignParentStart="true"-->
-<!--        android:layout_alignParentEnd="true"-->
-<!--        android:layout_marginStart="122dp"-->
-<!--        android:layout_marginTop="32dp"-->
-<!--        android:layout_marginEnd="124dp"-->
-<!--        android:background="@drawable/rounded_button"-->
-<!--        android:text="Tambah Jadwal"/>-->
+    <!--    <Button-->
+    <!--        android:layout_width="wrap_content"-->
+    <!--        android:layout_height="wrap_content"-->
+    <!--        android:id="@+id/add_form"-->
+    <!--        android:layout_below="@id/card3"-->
+    <!--        android:layout_alignParentStart="true"-->
+    <!--        android:layout_alignParentEnd="true"-->
+    <!--        android:layout_marginStart="122dp"-->
+    <!--        android:layout_marginTop="32dp"-->
+    <!--        android:layout_marginEnd="124dp"-->
+    <!--        android:background="@drawable/rounded_button"-->
+    <!--        android:text="Tambah Jadwal"/>-->
 
 </RelativeLayout>

@@ -8,20 +8,32 @@
     android:theme="@style/ThemeOverlay.ScheduleApp.AppWidgetContainer">
 
 
-        <TextView
-            android:id="@+id/appwidget_text"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="@string/title_home"
-            android:textColor="@color/blue"
-            android:textSize="12sp"
-            android:textStyle="bold|italic" />
+<!--        <TextView-->
+<!--            android:id="@+id/appwidget_text"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:text="@string/title_home"-->
+<!--            android:textColor="@color/blue"-->
+<!--            android:textSize="12sp"-->
+<!--            android:textStyle="bold|italic" />-->
+
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="90dp"
+            android:layout_height="90dp"
+            android:adjustViewBounds="true"
+            android:layout_centerInParent="true"
+            android:background="@drawable/logo_cs"
+            android:maxWidth="3dp"
+            android:maxHeight="3dp" />
 
         <Button
             android:id="@+id/btn_widget"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
+            android:layout_centerInParent="true"
+            android:layout_below="@id/logo"
+            android:layout_marginTop="10dp"
             android:text="See Schedule"
             android:textSize="12sp" />
 

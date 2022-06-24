@@ -17,4 +17,6 @@
     <string name="save">Simpan</string>
     <string name="save_changes">Simpan Perubahan</string>
     <string name="language">Bahasa</string>
+    <string name="notif1">Jadwal anda telah ditambahkan!</string>
+    <string name="notif2">Klik untuk melihat jadwal anda</string>
 </resources>

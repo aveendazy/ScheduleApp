@@ -4,7 +4,6 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.os.Handler;
-import android.provider.ContactsContract;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -17,7 +16,6 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.scheduleapp.API.APIRequestData;
 import com.example.scheduleapp.API.RetroServer;
-import com.example.scheduleapp.Activity.AddActivity;
 import com.example.scheduleapp.Activity.MondayActivity;
 import com.example.scheduleapp.Activity.UpdateActivity;
 import com.example.scheduleapp.Model.DataModel;
@@ -83,7 +81,7 @@ public class AdapterData extends  RecyclerView.Adapter<AdapterData.HolderData>{
                 public void onClick(View v) {
                     AlertDialog.Builder dialogPesan = new AlertDialog.Builder(ctx);
                     dialogPesan.setTitle("Perhatian");
-                    dialogPesan.setMessage("Pilih operasi yang aKan dilakukan!");
+                    dialogPesan.setMessage("Pilih operasi yang akan dilakukan!");
                     dialogPesan.setCancelable(true);
 
                     idJadwal = Integer.parseInt(tvId.getText().toString());

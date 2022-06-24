@@ -3,6 +3,7 @@ package com.example.scheduleapp.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.provider.Settings;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -12,6 +13,7 @@ import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 import androidx.swiperefreshlayout.widget.SwipeRefreshLayout;
@@ -40,36 +42,26 @@ public class MondayActivity extends AppCompatActivity {
     private SwipeRefreshLayout srlData;
     private ProgressBar pbData;
     private FloatingActionButton fabTambah;
-    // private Button button;
-
-//    @Override
-//    public boolean onCreateOptionsMenu(Menu menu) {
-//        MenuInflater inflater = getMenuInflater();
-//        inflater.inflate(R.menu.menu,menu);
-//        return true;
-//    }
-//
-//    //toolbar
-//    @Override
-//    public boolean onOptionsItemSelected(@NonNull MenuItem item) {
-//        int id = item.getItemId();
-//        if (id == R.id.language){
-//            Intent intent = new Intent(Settings.ACTION_LOCALE_SETTINGS);
-//            startActivity(intent);
-//            return true;
-//        }
-//        return super.onOptionsItemSelected(item);
-//    }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.monday_schedule);
 
+        Toolbar toolbar = findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+//        nNotificationManager = (NotificationManager) getSystemService(NOTIFICATION_SERVICE);
+//
+//        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.O){
+//            NotificationChannel channel = new NotificationChannel(CHANNEL_ID, "notifictaion", NotificationManager.IMPORTANCE_DEFAULT);
+//            nNotificationManager.createNotificationChannel(channel);
+//        }
+
         rvData = findViewById(R.id.rv_data);
         srlData = findViewById(R.id.srl_data);
         pbData = findViewById(R.id.pb_data);
         fabTambah = findViewById(R.id.fab_tambah);
+
 
         // reverse layout kalo true -> scroll ke bawah jd ke atas, dan sebaliknya
         lmData = new LinearLayoutManager(this, LinearLayoutManager.VERTICAL, false);
@@ -93,6 +85,7 @@ public class MondayActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 startActivity(new Intent(MondayActivity.this, AddActivity.class));
+
             }
         });
 
@@ -141,6 +134,7 @@ public class MondayActivity extends AppCompatActivity {
             @Override
             public void onResponse(Call<ResponseModel> call, Response<ResponseModel> response) {
                 listData = response.body().getData();
+                Log.e("TAG", "onResponse: " + listData.toString());
                 adData = new AdapterData(MondayActivity.this, listData);
                 rvData.setAdapter(adData);
                 adData.notifyDataSetChanged();
@@ -155,4 +149,5 @@ public class MondayActivity extends AppCompatActivity {
             }
         });
     }
+
 }

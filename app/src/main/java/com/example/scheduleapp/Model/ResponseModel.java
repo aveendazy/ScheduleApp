@@ -12,4 +12,11 @@ public class ResponseModel {
     public void setData(List<DataModel> data) {
         this.data = data;
     }
+
+    @Override
+    public String toString() {
+        return "ResponseModel{" +
+                "data=" + data +
+                '}';
+    }
 }

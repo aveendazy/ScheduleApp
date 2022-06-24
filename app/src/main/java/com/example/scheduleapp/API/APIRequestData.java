@@ -7,30 +7,30 @@ import retrofit2.http.DELETE;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
 import retrofit2.http.GET;
+import retrofit2.http.HTTP;
 import retrofit2.http.POST;
+import retrofit2.http.Query;
 
 public interface APIRequestData {
     @GET("API_Senin.php")
     Call<ResponseModel> ardGetData();
 
     @FormUrlEncoded
-    @POST("API_Senin.php")
+    @POST("API_Senin.php?method=post")
     Call<ResponseModel> ardCreateData(
             @Field("wktMulai") String wktMulai,
             @Field("wktSelesai") String wktSelesai,
             @Field("jadwal") String jadwal
     );
 
-    @FormUrlEncoded
-    @DELETE("API_Senin.php")
+    @HTTP(method = "DELETE", path = "API_Senin.php", hasBody = true)
     Call<ResponseModel> ardDeleteData(
-            @Field("id") int id
+            @Query("id") int id
     );
 
-    @FormUrlEncoded
-    @GET("API_Senin.php?id=")
+    @GET("API_Senin.php")
     Call<ResponseModel> ardGetData2(
-            @Field("id") int id
+            @Query("id") int id
     );
 
     @FormUrlEncoded
